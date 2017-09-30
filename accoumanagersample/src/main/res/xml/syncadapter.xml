@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.shunwang.accountmanagerdemo"
+    android:allowParallelSyncs="false"
+    android:contentAuthority="com.shunwang.accountmanagerdemo.provider"
+    android:isAlwaysSyncable="true"
+    android:supportsUploading="false"
+    android:userVisible="true"/>
+    <!--
+    android:allowParallelSyncs: 是否允许SyncAdapter多实例同时运行
+    android:isAlwaysSyncable: 指定同步框架是否可以在任意时间运行你的SyncAdapter
+    android:supportsUploading: 是否允许应用上传数据到云端，如果只需要下载，不需要上传，就设置为false
+    -->
+
+

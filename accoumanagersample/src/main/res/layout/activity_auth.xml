@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginRight="50dp"
+        android:inputType="number"/>
+
+    <ImageButton
+        android:id="@+id/expandAll"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@android:drawable/arrow_down_float"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/name"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="16dp"
+        android:text="注册"
+        android:textColor="@android:color/holo_blue_light"/>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/password"
+        android:layout_marginTop="16dp"
+        android:text="登录"
+        android:textColor="@android:color/holo_blue_light"/>
+
+</RelativeLayout>
