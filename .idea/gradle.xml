@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/accessibilitymanagersample" />
             <option value="$PROJECT_DIR$/accoumanagersample" />
             <option value="$PROJECT_DIR$/activitymanagersample" />
+            <option value="$PROJECT_DIR$/captioningmanagersample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
