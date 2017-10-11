@@ -1,6 +1,9 @@
 # ActivityManager示例项目的问题 
 #### 关于
-`AccountManager`用来获取系统里正在运行的组件，包括进程、内存、应用程序相关的信息
+
+- 统一调度各应用程序的activity
+- 内存管理
+- 进程管理
 
 #### 计划
 
@@ -31,4 +34,10 @@ org.gradle.api.CircularReferenceException: Circular dependency between the follo
 - 使用3.0.0，需要AS3.0版本，到目前为止，尚未释出稳定版
 - [stackoverflow](https://stackoverflow.com/questions/44035504/how-to-use-data-binding-and-kotlin-in-android-studio-3-0-0)
 
-##### 要熟悉activity所有的属性
+##### 要熟悉activity标签所有的属性
+##### 熟悉application标签所有的属性
+##### zygot 
+- 为每个应用程序复刻一个虚拟机实例
+- 都是
+
+
