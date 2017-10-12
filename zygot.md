@@ -2,9 +2,9 @@
 
 - [系统启动 zygote 进程](#系统启动-zygote-进程)
 - [系统进入 zygote 进程](#系统进入-zygote-进程)
-- [孵化 SystemServer 进程](#孵化-SystemServer-进程)
-- [孵化 Application 进程](###孵化-Application-进程)
-- [ Tips ](#-Tips-)
+- [孵化 SystemServer 进程](#孵化-systemserver-进程)
+- [孵化 Application 进程](#孵化-application-进程)
+- [ Tips ](#-tips-)
 
 ### 系统启动 zygote 进程
 即android系统的启动，分为以下几步：
