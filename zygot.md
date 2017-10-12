@@ -3,7 +3,7 @@
 - [系统启动 zygote 进程](#系统启动-zygote-进程)
 - [系统进入 zygote 进程](#系统进入-zygote-进程)
 - [孵化 SystemServer 进程](#孵化-SystemServer-进程)
-- [孵化 Application 进程](#孵化-Application-进程)
+- [孵化 Application 进程](###孵化-Application-进程)
 - [ Tips ](#-Tips-)
 
 ### 系统启动 zygote 进程
