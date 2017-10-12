@@ -1,10 +1,10 @@
 # zygot 孵化器
 
-- [系统启动zygote进程](#系统启动zygote进程)
-- [系统进入zygote进程](#系统进入zygote进程)
-- [孵化SystemServer进程](#孵化SystemServer进程)
-- [孵化Application进程](#孵化Application进程)
-- [Tips](#Tips)
+- [系统启动zygote进程](#系统启动-zygote-进程)
+- [系统进入zygote进程](#系统进入-zygote-进程)
+- [孵化SystemServer进程](#孵化-SystemServer-进程)
+- [孵化Application进程](#孵化-Application-进程)
+- [Tips](#-Tips-)
 
 ### 系统启动zygote进程
 即android系统的启动，分为以下几步：
@@ -47,7 +47,6 @@ okkk
 okkk
 
 ### Tips   
-
 - 为所有Java程序复刻一个虚拟机实例
 - 应用程序的入口是`ActivityThread$main()`，而zygote就是为应用程序创建进程的
 - 大部分应用程序由zygote创建进程，但是系统引导进程、init进程不是
