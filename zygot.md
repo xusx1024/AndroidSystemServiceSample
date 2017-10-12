@@ -1,12 +1,12 @@
 # zygot 孵化器
 
-- [系统启动zygote进程](#系统启动-zygote-进程)
-- [系统进入zygote进程](#系统进入-zygote-进程)
-- [孵化SystemServer进程](#孵化-SystemServer-进程)
-- [孵化Application进程](#孵化-Application-进程)
-- [Tips](#-Tips-)
+- [系统启动 zygote 进程](#系统启动-zygote-进程)
+- [系统进入 zygote 进程](#系统进入-zygote-进程)
+- [孵化 SystemServer 进程](#孵化-SystemServer-进程)
+- [孵化 Application 进程](#孵化-Application-进程)
+- [ Tips ](#-Tips-)
 
-### 系统启动zygote进程
+### 系统启动 zygote 进程
 即android系统的启动，分为以下几步：
 - _启动电源以及系统启动_
   按下电源时，引导芯片代码开始从预定义的地方(固化在ROM)开始执行。加载引导程序Bootloader到RAM，然后执行
@@ -28,7 +28,7 @@
 
 ![p](./img/app_main.png)
 
-### 系统进入zygote进程
+### 系统进入 zygote 进程
 即zygote的初始化
 
 zygote服务是在init进程中由命令启动的，init.rc文件中的main方法执行。
@@ -40,10 +40,10 @@ com.android.internal.os.ZygoteInit
   - startSystemServer(abiList, socketName);//启动系统服务
 
 
-### 孵化SystemServer进程
+### 孵化 SystemServer 进程
 okkk
 
-### 孵化Application进程
+### 孵化 Application 进程
 okkk
 
 ### Tips   
