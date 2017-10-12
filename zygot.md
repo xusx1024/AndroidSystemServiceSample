@@ -41,18 +41,20 @@ com.android.internal.os.ZygoteInit
 
 
 ### 孵化SystemServer进程
+okkk
 
 ### 孵化Application进程
+okkk
 
-### Tips  
+### Tips   
+
 - 为所有Java程序复刻一个虚拟机实例
 - 应用程序的入口是`ActivityThread$main()`，而zygote就是为应用程序创建进程的
 - 大部分应用程序由zygote创建进程，但是系统引导进程、init进程不是
-  
   #### android中的zygote分两块
-  1.C/C++编写的zygote，主要用来为系统服务和应用程序复刻进程的
-  2.Java编写的zygote接口，负责为系统服务和应用程序调用C/C++ zygote接口执行复刻，创建虚拟机进程
+  1. C/C++编写的zygote，主要用来为系统服务和应用程序复刻进程的
+  2. Java编写的zygote接口，负责为系统服务和应用程序调用C/C++ zygote接口执行复刻，创建虚拟机进程
   
   #### android中的service分两种
-  1.NativeService
-  2.SystemService，即本project示例集所研究
+  1. NativeService
+  2. SystemService，即本project示例集所研究
