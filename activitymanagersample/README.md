@@ -34,10 +34,14 @@ org.gradle.api.CircularReferenceException: Circular dependency between the follo
 - 使用3.0.0，需要AS3.0版本，到目前为止，尚未释出稳定版
 - [stackoverflow](https://stackoverflow.com/questions/44035504/how-to-use-data-binding-and-kotlin-in-android-studio-3-0-0)
 
-##### 要熟悉activity标签所有的属性
+##### 熟悉activity标签所有的属性
 ##### 熟悉application标签所有的属性
+##### 熟悉adb中am相关的命令
+##### 熟悉adb中pm相关的命令
+##### 熟悉adb中input相关的命令
+##### 熟悉adb中logcat相关的命令
 ##### zygot 
-- 为每个应用程序复刻一个虚拟机实例
-- 都是
+- 为大部分应用程序复刻一个虚拟机实例
+- 系统引导进程，init进程不是由zygote创建的
 
 
