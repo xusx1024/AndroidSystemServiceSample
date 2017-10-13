@@ -35,11 +35,11 @@
 
 [init.rc源码](https://github.com/StephenRJ/cm12_system_core_rootdir)，基于aosp的，是cm的，cm现在也没了。。
 
-![p](./img/app_main.png)
+![p](../img/app_main.png)
 
 ### 系统进入 zygote 进程
 即zygote的初始化，在调用完ZygoteInit的main函数后，Zygote就进入了Java世界。
-![p](./img/ZygoteInit.png)
+![p](../img/ZygoteInit.png)
 
 * 启用无多线程模式
 
@@ -369,7 +369,7 @@ ZygoteHooks.startZygoteNoThreadCreation();
 
 
 ### 孵化 SystemServer 进程
-![system_server](./img/system_server)
+![system_server](../img/system_server.png)
 
 ```
     /**
