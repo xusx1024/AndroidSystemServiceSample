@@ -14,5 +14,30 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shunwang.aidldemo;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.os.RemoteException;
+import android.support.annotation.Nullable;
+import android.util.Log;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 10/13/2017.
+ */
+
+public class MyService extends Service {
+  @Nullable @Override public IBinder onBind(Intent intent) {
+    return new MyBinder();
+  }
+
+  class MyBinder extends IMyAidlInterface.Stub {
+
+    @Override public String getName() throws RemoteException {
+      Log.i("MainActivity", "service get Name");
+      return "test";
+    }
+  }
+}

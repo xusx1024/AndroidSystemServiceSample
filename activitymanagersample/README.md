@@ -1,16 +1,14 @@
 # ActivityManager示例项目的问题 
 #### 关于
 
-- 统一调度各应用程序的activity
-- 内存管理
-- 进程管理
-
-#### 计划
-
-- API调用比较简单
-- 使用`Android Architecture Components`框架来动态展示进程、内存这些信息
-- 考虑使用图表等展示
-- 考虑做得和Windows任务管理器类似
+- ActivityManagerService启动过程
+  - [系统启动过程 - init进程启动 - zygote启动 - SystemServer启动](../doc/zygote.md)
+  - SystemServer启动ActivityManagerService过程
+- ActivityManager应用
+  - 负责启动、切换、调度系统和应用程序的四大组件
+  - 内存管理
+  - 进程管理
+ 
 
 #### 问题
 ##### Execution failed for task ':app:compileDebugJavaWithJavac'

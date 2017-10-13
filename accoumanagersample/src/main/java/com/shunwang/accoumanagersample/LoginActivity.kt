@@ -82,7 +82,7 @@ class LoginActivity : AccountAuthenticatorActivity() {
       var callback = AccountManagerCallback<Bundle> { future ->
         try {
           //该变量没有用到，但是可以在用户名密码错误的情况下，提前触发下面的java.lang.IllegalArgumentException: getAuthToken not supported
-          var token = future.result.getString(AccountManager.KEY_AUTHTOKEN)
+          future.result.getString(AccountManager.KEY_AUTHTOKEN)
           var intent = Intent(this@LoginActivity, AuthedUserActivity::class.java)
           var account1 = Account(future.result.getString(AccountManager.KEY_ACCOUNT_NAME)
               , future.result.getString(AccountManager.KEY_ACCOUNT_TYPE))
@@ -144,12 +144,12 @@ class LoginActivity : AccountAuthenticatorActivity() {
       var listView = inflater.inflate(R.layout.pop_account, null) as ListView
       mAdapter = AccountAdapter(this@LoginActivity, R.layout.item_account, accounts)
       listView.adapter = mAdapter
-      listView.setOnItemClickListener { parent, view, position, id ->
+      listView.setOnItemClickListener { parent, _, position, _ ->
         var account: Account = parent.adapter.getItem(position) as Account
-        if (account != null) {
-          name.setText(account!!.name)
-          password.setText(mManager!!.getPassword(account))
-        }
+
+        name.setText(account.name)
+        password.setText(mManager!!.getPassword(account))
+
         dismiss()
       }
       contentView = listView

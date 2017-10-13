@@ -28,7 +28,7 @@ class SyncService : Service() {
 
   companion object {
     var sSyncAdapter: SyncAdapter? = null
-    val sSyncAdapterLock: Object = Object()
+    val sSyncAdapterLock: Any = Object()
   }
 
   /**

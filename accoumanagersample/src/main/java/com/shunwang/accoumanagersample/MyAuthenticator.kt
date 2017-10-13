@@ -62,13 +62,13 @@ class MyAuthenticator(context: Context) : AbstractAccountAuthenticator(context) 
       var random = Random()
       bundle.putString(AccountManager.KEY_AUTHTOKEN, random.nextLong().toString())
       bundle.putString(AccountManager.KEY_ACCOUNT_TYPE, account!!.type)
-      bundle.putString(AccountManager.KEY_ACCOUNT_NAME, account!!.name)
+      bundle.putString(AccountManager.KEY_ACCOUNT_NAME, account.name)
       return bundle
     }
     var intent = Intent(mContext, LoginActivity::class.java)
     bundle.putParcelable(AccountManager.KEY_INTENT, intent)
     bundle.putString(AccountManager.KEY_ACCOUNT_TYPE, account!!.type)
-    bundle.putString(AccountManager.KEY_ACCOUNT_NAME, account!!.name)
+    bundle.putString(AccountManager.KEY_ACCOUNT_NAME, account.name)
     intent.putExtra(AccountManager.KEY_ACCOUNT_AUTHENTICATOR_RESPONSE, response)
     return bundle
   }

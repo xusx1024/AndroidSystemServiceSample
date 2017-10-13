@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/accessibilitymanagersample/accessibilitymanagersample.iml" filepath="$PROJECT_DIR$/accessibilitymanagersample/accessibilitymanagersample.iml" />
       <module fileurl="file://$PROJECT_DIR$/accoumanagersample/accoumanagersample.iml" filepath="$PROJECT_DIR$/accoumanagersample/accoumanagersample.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitymanagersample/activitymanagersample.iml" filepath="$PROJECT_DIR$/activitymanagersample/activitymanagersample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidldemo/aidldemo.iml" filepath="$PROJECT_DIR$/aidldemo/aidldemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidldemo2/aidldemo2.iml" filepath="$PROJECT_DIR$/aidldemo2/aidldemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" filepath="$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" />
     </modules>
   </component>
