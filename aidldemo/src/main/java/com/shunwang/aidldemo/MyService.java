@@ -34,7 +34,6 @@ public class MyService extends Service {
   }
 
   class MyBinder extends IMyAidlInterface.Stub {
-
     @Override public String getName() throws RemoteException {
       Log.i("MainActivity", "service get Name");
       return "test";

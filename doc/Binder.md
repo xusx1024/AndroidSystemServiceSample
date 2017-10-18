@@ -40,8 +40,49 @@
  ###### Binder驱动
  代码位置：`drivers/misc/binder.c`
  
- 通信的核心，尽管名为‘驱动’，实际上和硬件设备没有关系，只是实现方式和设备驱动程序是一样的：工作于内核态，支持open()
- mmap(),poll(),ioctl()
+ 通信的核心，尽管名为‘驱动’，实际上和硬件设备没有关系，只是实现方式和设备驱动程序是一样的：工作于内核态，
+ 
+ 支持open(), mmap(),poll(),ioctl()
+ 
+ ##### Service Manager & 实名Binder
+ 和DNS类似。
+ 
+ Service Manager的作用是将字符形式的Binder名字转化为Client中的对该Binder的引用，从而Client可以通过Binder名字获得Server中对Binder实体的引用。
+ 
+ 注册了名字的Binder叫做实名Binder。Server将名字发送给Service Manager来注册，Binder驱动为这个穿过进程边界的Binder在内核空间创建实体节点
+ 以及Service Manager对Binder实体的引用，将名字和新建引用发送给Service Manager，Service Manager取出名字和引用填入一张查找表中。
+ 
+ 以上过程也是通过进程间通信传递的数据，在实现进程间通信的过程中使用了进程间通信，因为我们预定义了一个Binder。
+ 
+ 该Binder比较特殊。没有名字，不需要注册，当一个进程使用`BINDER_SET_CONTEXT_MGR`命令将自己注册成Service Manager时，Binder驱动会自动为它创建Binder实体。
+ 
+ 该Binder的引用在所有的Client中都固定为0，无需通过其它手段获得。
+ 
+ 也就是说，一个Server若向Service Manager注册自己的Binder，必须通过0这个引用号和Service Manager的Binder通信。
+ 
+ 一个Server相对于它的Client来说是Service，但相对于Service Manager来说是一个Client。
+ 
+ ##### Client & 实名Binder
+ 
+ Server向Service Manager注册了Binder实体及其名字后，Client就可以通过名字获取该Binder的引用了。
+ 
+ Client也通过引用号为0的Binder向Service Manager请求访问某个Binder。Service Manager收到该请求，从查找表找到该名字对应的Binder引用，回复给Client。
+ 
+ 如果有别的Client请求访问该Binder，也会得到指向该Binder的引用，就行Java里一个对象存在多个引用一样。
+ 
+ 这些引用是强类型，确保只要有引用Binder实体就不会被释放掉。
+ 
+ ##### 匿名Binder
+ 
+ 并不是所以的Binder都需要向Service Manager注册的。
+ 
+ Server端可以通过已建立的连接将创建的Binder传递给Client。从而建立一条私密通道。
+ 
+ 
+ 
+ 
+ 
+ 
   
 ##### 其他概念  
 * Bp，Binder Proxy
