@@ -70,6 +70,21 @@ public class MainActivity extends AppCompatActivity {
     } catch (RemoteException e) {
       e.printStackTrace();
     }
+
+    Runnable r1 = new Runnable() {
+      @Override public void run() {
+        // todo
+      }
+    };
+    Runnable r2 = new Runnable() {
+      @Override public void run() {
+        // todo
+      }
+    };
+    Thread t = new Thread(r1);
+
+    t.start();
+    t.run();
   }
 
   void bind() {
@@ -90,3 +105,4 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 }
+

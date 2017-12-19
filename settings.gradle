@@ -14,5 +14,5 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo',
+include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample',
     ':aidldemo2', ':captioningmanagersample'

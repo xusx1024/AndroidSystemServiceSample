@@ -1,7 +1,9 @@
 ##AS
 - markdown
-- plantuml
+- plantUML
 - checkstyle
+- findbugs
+
 
 ##win
 - Astah UML
@@ -13,6 +15,6 @@
 - GifCam
 - CaptureColor
 - git
-- apktool
+- apk tool
 - clover
 - markdownpad

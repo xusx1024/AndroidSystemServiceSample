@@ -28,7 +28,7 @@
     - 创建一些文件夹并挂载设备
     - 初始化和启动属性服务(类似win平台的注册表)
     - 解析init.rc配置文件并启动zygote进程
-    
+![android 系统启动过程](../img/android-os-boot.png)
 [init.rc代码启动zygote进程](http://blog.csdn.net/fu_kevin0606/article/details/53469076)
 
 [Android初始化语言](http://blog.csdn.net/hongbochen1223/article/details/56331690)
@@ -38,7 +38,7 @@
 ![p](../img/app_main.png)
 
 ### 系统进入 zygote 进程
-即zygote的初始化，在调用完ZygoteInit的main函数后，Zygote就进入了Java世界。
+即zygote的初始化，在调用完ZygoteInit的main函数后，Zygote就进入了Java世界，在此可以看到启动动画。
 ![p](../img/ZygoteInit.png)
 
 * 启用无多线程模式
@@ -438,7 +438,7 @@ ZygoteHooks.startZygoteNoThreadCreation();
     }
 
 ```
-  * 创建SystemServer进程
+  * 创建SystemServer进程，android的所有服务循环框架都建立在SystemServer上
 
 ```
     public static int forkSystemServer(int uid, int gid, int[] gids, int debugFlags,
@@ -521,7 +521,18 @@ ZygoteHooks.startZygoteNoThreadCreation();
         /* should never reach here */
     }
 ```
-    
+
+
+SystemServer.main中创建线程注册各种service到servicemanager中。
+
+#### HOME启动
+
+在启动完所有的Android服务后，通知各个服务，系统已经准备就绪。
+
+startSystemUi 方法启动HOME界面。
+
+至此，android系统完成了引导过程，这是ACTION_BOOT_COMPLETED开机启动广播就会发出去。
+
 ### 孵化 Application 进程
 
 ```

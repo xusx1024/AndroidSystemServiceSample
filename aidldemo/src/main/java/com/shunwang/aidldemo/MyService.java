@@ -33,10 +33,13 @@ public class MyService extends Service {
     return new MyBinder();
   }
 
-  class MyBinder extends IMyAidlInterface.Stub {
+  static class MyBinder extends IMyAidlInterface.Stub {
+
     @Override public String getName() throws RemoteException {
       Log.i("MainActivity", "service get Name");
       return "test";
     }
+
+
   }
 }
