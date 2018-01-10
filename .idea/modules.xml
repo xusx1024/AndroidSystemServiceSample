@@ -9,7 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/aidldemo/aidldemo.iml" filepath="$PROJECT_DIR$/aidldemo/aidldemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidldemo2/aidldemo2.iml" filepath="$PROJECT_DIR$/aidldemo2/aidldemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/alarmmanagersample/alarmmanagersample.iml" filepath="$PROJECT_DIR$/alarmmanagersample/alarmmanagersample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiomanagersample/audiomanagersample.iml" filepath="$PROJECT_DIR$/audiomanagersample/audiomanagersample.iml" />
       <module fileurl="file://$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" filepath="$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" filepath="$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pat/pat.iml" filepath="$PROJECT_DIR$/pat/pat.iml" />
     </modules>
   </component>
 </project>
