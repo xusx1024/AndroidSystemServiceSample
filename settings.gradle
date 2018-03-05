@@ -14,5 +14,5 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':pat', ':audiomanagersample', ':cleanarchitecture',
+include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':pat', ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
     ':aidldemo2', ':captioningmanagersample'

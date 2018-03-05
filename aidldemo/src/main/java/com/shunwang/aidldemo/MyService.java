@@ -30,16 +30,24 @@ import android.util.Log;
 
 public class MyService extends Service {
   @Nullable @Override public IBinder onBind(Intent intent) {
-    return new MyBinder();
+    return new Proxy().asBinder();
   }
 
   static class MyBinder extends IMyAidlInterface.Stub {
-
     @Override public String getName() throws RemoteException {
       Log.i("MainActivity", "service get Name");
       return "test";
     }
+  }
+}
 
+class Proxy implements com.shunwang.aidldemo.IMyAidlInterface{
 
+  @Override public String getName() throws RemoteException {
+    return "test";
+  }
+
+  @Override public IBinder asBinder() {
+    return null;
   }
 }

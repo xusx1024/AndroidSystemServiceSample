@@ -21,13 +21,20 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.annotation.Nullable;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Fun:
@@ -37,14 +44,48 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
   static final String TAG = "MainActivity";
+  static int color = Color.parseColor("#0090CC");
   TextView textView;
+  View.OnClickListener mListener = new View.OnClickListener() {
+    @Override public void onClick(View v) {
+      Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
+    }
+  };
   private IMyAidlInterface myInterface;
   private MyServiceConnection mMyServiceConnection;
+
+  //给TextView设置部分字体大小和颜色
+  public static void setPartialSizeAndColor(TextView tv, int start, int end, int textSize,
+      int textColor, final View.OnClickListener clickListener) {
+    String s = tv.getText().toString();
+    Spannable spannable = new SpannableString(s);
+    //spannable.setSpan(new AbsoluteSizeSpan(textSize, false), start, end,
+    //    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    //spannable.setSpan(new ForegroundColorSpan(Color.BLUE), start, end,
+    //    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    spannable.setSpan(new ClickableSpan() {
+
+      @Override public void updateDrawState(TextPaint ds) {
+        ds.setColor(color);
+      }
+
+      @Override public void onClick(View widget) {
+        clickListener.onClick(widget);
+      }
+    }, start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    tv.setText(spannable);
+  }
 
   @Override public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     textView = (TextView) findViewById(R.id.tv_msg);
+    String text = "123456789023456789";
+    textView.setText(text);
+    textView.setClickable(true);
+
+    setPartialSizeAndColor(textView, text.length() - 6, text.length(), 50, color, mListener);
+    textView.setMovementMethod(LinkMovementMethod.getInstance());
     mMyServiceConnection = new MyServiceConnection();
     textView.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
