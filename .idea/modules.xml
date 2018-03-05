@@ -13,8 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" filepath="$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" />
       <module fileurl="file://$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" filepath="$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/clipboardmanagersample/clipboardmanagersample.iml" filepath="$PROJECT_DIR$/clipboardmanagersample/clipboardmanagersample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knowledge/pat.iml" filepath="$PROJECT_DIR$/knowledge/pat.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlinapi/kotlinapi.iml" filepath="$PROJECT_DIR$/kotlinapi/kotlinapi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pat/pat.iml" filepath="$PROJECT_DIR$/pat/pat.iml" />
     </modules>
   </component>
 </project>

@@ -19,8 +19,6 @@ package com.shengxing.clipboardmanagersample
 import android.os.IBinder
 import java.lang.reflect.InvocationHandler
 import java.lang.reflect.Method
-import java.lang.reflect.Proxy
-import java.lang.reflect.Proxy.newProxyInstance
 
 /**
  * Fun:使用JDK的动态代理类
@@ -37,7 +35,6 @@ class ServiceHook(mBase: IBinder, interfaceName: String, isStub: Boolean,
         TODO(
             "not implemented") //To change body of created functions use File | Settings | File Templates.
       }
-
     }
   }
 
@@ -48,10 +45,9 @@ class ServiceHook(mBase: IBinder, interfaceName: String, isStub: Boolean,
 
   override fun invoke(proxy: Any, method: Method, args: Array<out Any>?): Any {
     if ("queryLocalInterface" == method.name) {
-      return newProxyInstance(proxy.javaClass.classLoader, Class()[]{ mInterface },
-          HookHandler())
+//      return newProxyInstance(proxy.javaClass.classLoader, Class()[]{ mInterface },
+//          HookHandler())
     }
-
     return method!!.invoke(proxy, args)
 
   }
