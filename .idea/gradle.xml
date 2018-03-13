@@ -18,8 +18,8 @@
             <option value="$PROJECT_DIR$/captioningmanagersample" />
             <option value="$PROJECT_DIR$/cleanarchitecture" />
             <option value="$PROJECT_DIR$/clipboardmanagersample" />
-            <option value="$PROJECT_DIR$/knowledge" />
             <option value="$PROJECT_DIR$/kotlinapi" />
+            <option value="$PROJECT_DIR$/ndk" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

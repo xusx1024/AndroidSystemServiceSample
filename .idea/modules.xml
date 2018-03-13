@@ -13,8 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" filepath="$PROJECT_DIR$/captioningmanagersample/captioningmanagersample.iml" />
       <module fileurl="file://$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" filepath="$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/clipboardmanagersample/clipboardmanagersample.iml" filepath="$PROJECT_DIR$/clipboardmanagersample/clipboardmanagersample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/knowledge/knowledge.iml" filepath="$PROJECT_DIR$/knowledge/knowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlinapi/kotlinapi.iml" filepath="$PROJECT_DIR$/kotlinapi/kotlinapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ndk/ndk.iml" filepath="$PROJECT_DIR$/ndk/ndk.iml" />
       <module fileurl="file://E:\OtherProjects\AndroidSystemServiceSample\knowledge\pat.iml" filepath="E:\OtherProjects\AndroidSystemServiceSample\knowledge\pat.iml" />
     </modules>
   </component>

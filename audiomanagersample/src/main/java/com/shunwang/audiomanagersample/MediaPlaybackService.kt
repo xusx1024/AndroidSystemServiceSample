@@ -49,7 +49,7 @@ class MediaPlaybackService : MediaBrowserServiceCompat() {
             PlaybackStateCompat.ACTION_PLAY_PAUSE
     )
     mMediaSession!!.setPlaybackState(mStateBuilder!!.build())
-    mMediaSession!!.setCallback(MySessionCallback())
+//    mMediaSession!!.setCallback(MySessionCallback())
     sessionToken = mMediaSession!!.sessionToken
   }
 
