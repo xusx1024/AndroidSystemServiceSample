@@ -42,10 +42,24 @@ view的展示过程,简单说来是测量,布局,绘制的过程.
 
 `requestLayout`, 当布局变化的时候,比如方向变化,尺寸变化,会调用该方法,在自定义视图中,如果某些情况下希望重新测量尺寸大小,应该手动调用该方法,他会触发`measure`和`layout`过程,但不会draw.
 
+![diff](../img/view_draw_method_chain.png)
+
 ---
 
 width和measureWidth的区别:
 
-measureWidth是在measure阶段确定的,通过setMeasureDimension方法复制;
+measureWidth是在measure阶段确定的,通过setMeasureDimension方法赋值;
+
 width是在layout阶段确定的,是view的实际绘制的宽高;
+
 view的宽高是由父视图容器和本身参数决定的,并不是xml中的layout_width,layout_height设置决定的,这两个参数只是决定了在layout是的一个参考量
+
+---
+
+view 默认是可见的
+
+如果设置属性INVISIBLE,则不会调用layout方法
+
+如果设置属性GONE,则不会调用measure,layout方法
+
+不管view是什么状态,总是会回调onAttachToWindow和onDetachedFromWindow
