@@ -42,7 +42,7 @@ loop里做了三件事情:里面无限循环取出MessageQueue中的Message
 
 ---
 
-一个线程只能由一个Looper,也只能由一个MessageQueue
+一个线程只能由一个Looper,也只能有一个MessageQueue
 
 handler内存泄露处理.
 
