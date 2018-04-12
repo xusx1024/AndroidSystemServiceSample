@@ -36,7 +36,6 @@
 1. 进程间的通信方式
 2. 为什么是Binder
 3. AIDL语言是什么
-4.
 
 ---
 
@@ -45,7 +44,12 @@
 2. LayoutInflater的填充设计
 3. WindowManager相关的调用
 
+---
 
+apk相关:
+1. 打包流程
+2. apk瘦身
+3. 热修复
 
 
 
