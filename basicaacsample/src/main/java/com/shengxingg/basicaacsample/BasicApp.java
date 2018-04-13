@@ -14,6 +14,30 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':ndk', ':basicaacsample',
-     ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shengxingg.basicaacsample;
+
+import android.app.Application;
+import com.shengxingg.basicaacsample.db.AppDatabase;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 4/12/2018.
+ */
+
+public class BasicApp extends Application {
+
+  private AppExecutors mAppExecutors;
+
+  @Override public void onCreate() {
+    super.onCreate();
+    mAppExecutors = new AppExecutors();
+  }
+
+  public AppDatabase getDatabase() {
+    return AppDatabase.getInstance(this, mAppExecutors);
+  }
+
+  public DataRepository getRepository() {
+    return DataRepository.getInstance(getDatabase());
+  }
+}

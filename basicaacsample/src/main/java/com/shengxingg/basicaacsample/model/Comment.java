@@ -14,6 +14,18 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':ndk', ':basicaacsample',
-     ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shengxingg.basicaacsample.model;
+
+import java.util.Date;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 4/12/2018.
+ */
+
+public interface Comment {
+  int getId();
+  int getProductId();
+  String getText();
+  Date getPostedAt();
+}

@@ -14,6 +14,22 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':ndk', ':basicaacsample',
-     ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shengxingg.basicaacsample.ui;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 4/13/2018.
+ */
+
+public class CommentAdapter {
+
+  static class CommentViewHolder extends RecyclerView.ViewHolder {
+
+    public CommentViewHolder(View itemView) {
+      super(itemView);
+    }
+  }
+}

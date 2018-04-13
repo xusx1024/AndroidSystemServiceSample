@@ -14,6 +14,15 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':ndk', ':basicaacsample',
-     ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shengxingg.basicaacsample.ui;
+
+import com.shengxingg.basicaacsample.model.Product;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 4/13/2018.
+ */
+
+public interface ProductClickCallback {
+  void onClick(Product product);
+}

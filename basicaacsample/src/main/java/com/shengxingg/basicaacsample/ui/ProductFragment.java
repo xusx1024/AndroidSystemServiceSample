@@ -14,6 +14,20 @@
  *  limitations under the License.
  */
 
-include ':activitymanagersample', ':accoumanagersample', ':accessibilitymanagersample', ':aidldemo', ':alarmmanagersample', ':ndk', ':basicaacsample',
-     ':audiomanagersample', ':cleanarchitecture', ':kotlinapi', ':clipboardmanagersample',
-    ':aidldemo2', ':captioningmanagersample'
+package com.shengxingg.basicaacsample.ui;
+
+import android.support.v4.app.Fragment;
+
+/**
+ * Fun:
+ * Created by sxx.xu on 4/13/2018.
+ */
+
+public class ProductFragment extends Fragment {
+
+  private static final String KEY_PRODUCT_ID = "product_id";
+
+  //private ProductFragmentBinding mBinding;
+
+
+}
