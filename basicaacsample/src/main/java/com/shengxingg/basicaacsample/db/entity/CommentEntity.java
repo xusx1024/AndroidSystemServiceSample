@@ -27,9 +27,11 @@ import java.util.Date;
  * Fun:
  * Created by sxx.xu on 4/12/2018.
  */
-@Entity(tableName = "comments", foreignKeys = {
-    @ForeignKey(entity = ProductEntity.class, parentColumns = "id", childColumns = "productId", onDelete = ForeignKey.CASCADE)
-}, indices = { @Index(value = "productId") }) public class CommentEntity implements Comment {
+//@Entity(tableName = "comments", foreignKeys = {
+//    @ForeignKey(entity = ProductEntity.class, parentColumns = "id", childColumns = "productId", onDelete = ForeignKey.CASCADE)
+//}, indices = { @Index(value = "productId") })
+
+public class CommentEntity implements Comment {
 
   @PrimaryKey(autoGenerate = true) private int id;
   private int productId;

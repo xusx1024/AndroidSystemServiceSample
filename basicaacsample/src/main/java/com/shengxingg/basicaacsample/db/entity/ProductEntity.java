@@ -25,7 +25,9 @@ import com.shengxingg.basicaacsample.model.Product;
  * Created by sxx.xu on 4/12/2018.
  */
 
-@Entity(tableName = "products") public class ProductEntity implements Product {
+//@Entity(tableName = "products")
+
+public class ProductEntity implements Product {
 
   @PrimaryKey private int id;
   private String name;

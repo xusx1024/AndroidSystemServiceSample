@@ -34,8 +34,10 @@ import com.shengxingg.basicaacsample.db.entity.CommentEntity;
 import com.shengxingg.basicaacsample.db.entity.ProductEntity;
 import java.util.List;
 
-@Database(entities = { ProductEntity.class, CommentEntity.class }, version = 1)
-@TypeConverters(DateConverter.class) public abstract class AppDatabase extends RoomDatabase {
+//@Database(entities = { ProductEntity.class, CommentEntity.class }, version = 1)
+//@TypeConverters(DateConverter.class)
+
+public abstract class AppDatabase extends RoomDatabase {
 
   @VisibleForTesting public static final String DATABASE_NAME = "base_sample-db";
   private static AppDatabase sInstance;

@@ -98,4 +98,6 @@ dependencies {
   androidTestImplementation deps.support.v4
   androidTestImplementation deps.support.app_compat
   androidTestImplementation deps.support.design
+
+  implementation 'com.zzhoujay.richtext:richtext:2.0.13'
 }
