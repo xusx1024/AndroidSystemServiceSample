@@ -26,23 +26,6 @@ IWindowSession是一个Binder实现
 
 ---
 
-系统调用WindowManager的引用链(以Activity的显示为例):
-
-- 调用Activity.startActivity
-- 跳转至Instrumentation.execStartActivity
-- 跳转至ActivityManagerService.startActivity
-
-
----
-
-WindowManagerService中的添加流程:
-- 判断是否有添加权限
-- 如果有权限,继续
-
-
-
----
-
 Activity的创建过程
 - Activity的实例
 - Window的创建

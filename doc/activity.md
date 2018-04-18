@@ -27,7 +27,7 @@
 1. 无论是通过`Launcher`来启动`Activity`,还是通过`startActivity`来启动`Activity`,都通过`Binder`进程间通信进入到`ActivityManagerService`进程中,并且
 调用`ActivityManagerService.startActivity`接口
 
-2. `ActivityManagerService`调用`ActivityStack.startActivityMayWait`来准备要启动的`Activity`的相关信息
+2. `ActivityManagerService`调用`ActivityStarter.startActivityMayWait`来准备要启动的`Activity`的相关信息
 
 3. `ActivityStack`通知`ApplicationThread`要进行`Activity`启动调度了,这里的`ApplicationThread`代表的是调用`ActivityManagerService.startActivity`接口
 的进程,对于通过点击应用程序图标的情景来说,这个进程就是`Launcher`了,而对于通过在`Activity`内部调用`startActivity`的情景来说,这个进程就是该`Activity`所在的进程了
@@ -44,7 +44,9 @@
 
 ---
 
-> 通过应用程序图标来启动`Activity`
+> [8.0通过应用程序图标来启动`Activity`](https://www.jianshu.com/p/fbea00880da1)
+
+1.
 
 
 
